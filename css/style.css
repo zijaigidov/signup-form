@@ -89,11 +89,12 @@ html {
   bottom: 0;
   left: 40%;
   background: var(--content-background-color);
-  padding: 15vh 6vw;
 }
 
 /* Use clamp() for responsive typography */
 .content-header {
+  padding: 15vh 6vw 0;
+
   font-size: clamp(1.25rem, 2vw, 1.375rem);
   font-weight: 500;
 }
