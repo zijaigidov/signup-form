@@ -6,6 +6,8 @@
   --attribution-text-color-hover: #bbb;
 
   /* Fallback system font stack */
+  --primary-font: 'Open Sans';
+  --logo-font: 'Times New Roman';
   --system-fonts: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif,
     'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 }
@@ -19,10 +21,10 @@
 }
 
 html {
-  font-family: 'Times New Roman', var(--system-fonts);
+  font-family: var(--primary-font, --system-fonts);
 }
 
-body {
+.wrapper {
   position: relative;
   height: 100vh;
 }
@@ -39,6 +41,7 @@ body {
 }
 
 .logo-wrapper {
+  font-family: var(--logo-font);
   color: var(--logo-color);
   background: var(--logo-overlay-background-color);
   padding: 5vh 0;
@@ -74,4 +77,26 @@ body {
 
 .attribution:hover {
   color: var(--attribution-text-color-hover);
+}
+
+/* Content */
+
+.content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 40%;
+  padding: 15vh 6vw;
+}
+
+/* Use clamp() for responsive typography */
+.content-header {
+  font-size: clamp(1.25rem, 2vw, 1.375rem);
+  font-weight: 500;
+}
+
+.content-header h2 {
+  font-size: clamp(1.375rem, 2vw, 1.5rem);
+  margin-bottom: 8px;
 }
