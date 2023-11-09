@@ -4,6 +4,7 @@
   --logo-overlay-background-color: rgba(0, 0, 0, 0.5);
   --attribution-text-color: #ddd;
   --attribution-text-color-hover: #bbb;
+  --content-background-color: #f5f5f5;
 
   /* Fallback system font stack */
   --primary-font: 'Open Sans';
@@ -87,6 +88,7 @@ html {
   right: 0;
   bottom: 0;
   left: 40%;
+  background: var(--content-background-color);
   padding: 15vh 6vw;
 }
 
