@@ -1,4 +1,6 @@
 :root {
+  --logo-color: #eee;
+  --logo-overlay-background-color: rgba(0, 0, 0, 0.5);
   --attribution-text-color: #ddd;
   --attribution-text-color-hover: #bbb;
 }
@@ -25,6 +27,29 @@ body {
   left: 0;
   width: 40%;
   bottom: 0;
+}
+
+.logo-wrapper {
+  color: var(--logo-color);
+  background: var(--logo-overlay-background-color);
+  padding: 5vh 0;
+  margin-top: 15vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo-wrapper .logo-svg {
+  fill: currentColor;
+  width: 70px;
+  height: 70px;
+}
+
+.logo-wrapper p {
+  font-size: 64px;
+  font-weight: bold;
 }
 
 .attribution {
