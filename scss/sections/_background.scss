@@ -1,0 +1,49 @@
+/* Background */
+
+.background {
+  background: url('/images/background.jpg') no-repeat center left / cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40%;
+  bottom: 0;
+}
+
+.logo-wrapper {
+  font-family: $logo-font;
+  color: $logo-clr;
+  background: $logo-overlay-bg-clr;
+  padding: 5vh 0;
+  margin-top: 15vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo-wrapper .logo-svg {
+  fill: currentColor;
+  width: 70px;
+  height: 70px;
+}
+
+.logo-wrapper p {
+  font-size: 64px;
+  font-weight: bold;
+}
+
+.attribution {
+  color: $attribution-clr;
+  text-align: center;
+  text-decoration: none;
+
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 16px;
+}
+
+.attribution:hover {
+  color: $attribution-clr-hover;
+}

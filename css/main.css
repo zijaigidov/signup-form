@@ -1,40 +1,19 @@
-:root {
-  /* Colors */
-  --logo-color: #eee;
-  --logo-overlay-background-color: rgba(0, 0, 0, 0.5);
-
-  --attribution-text-color: #ddd;
-  --attribution-text-color-hover: #bbb;
-
-  --content-background-color: #f5f5f5;
-  --form-background-color: #ffffff;
-  --form-input-border-color: #ddd;
-  --form-input-border-color-focus: #3b90e1;
-  --form-input-border-color-error: #f46d75;
-
-  --submit-btn-text-color: #ffffff;
-  --submit-btn-background-color: #dfb099;
-  --submit-btn-box-shadow: rgba(0, 0, 0, 0.4);
-
-  --login-text-color: #dfb099;
-
-  /* Fallback system font stack */
-  --primary-font: 'Open Sans';
-  --logo-font: 'Times New Roman';
-  --system-fonts: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif,
-    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-}
-
+/* Meta partials */
+/* Colors */
+/* Fonts */
+/* Resets */
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
+/* Section partials */
+/* Document styles */
 html {
-  font-family: var(--primary-font, --system-fonts);
+  font-family: "Open Sans", system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 .wrapper {
@@ -43,9 +22,8 @@ html {
 }
 
 /* Background */
-
 .background {
-  background: url('./../images/background.jpg') no-repeat center left / cover;
+  background: url("/images/background.jpg") no-repeat center left/cover;
   position: absolute;
   top: 0;
   left: 0;
@@ -54,12 +32,11 @@ html {
 }
 
 .logo-wrapper {
-  font-family: var(--logo-font);
-  color: var(--logo-color);
-  background: var(--logo-overlay-background-color);
+  font-family: "Times New Roman";
+  color: #eee;
+  background: rgba(0, 0, 0, 0.5);
   padding: 5vh 0;
   margin-top: 15vh;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -78,10 +55,9 @@ html {
 }
 
 .attribution {
-  color: var(--attribution-text-color);
+  color: #ddd;
   text-align: center;
   text-decoration: none;
-
   position: absolute;
   right: 0;
   left: 0;
@@ -89,25 +65,22 @@ html {
 }
 
 .attribution:hover {
-  color: var(--attribution-text-color-hover);
+  color: #bbb;
 }
 
 /* Content */
-
 .content {
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 40%;
-  background: var(--content-background-color);
+  background: #f5f5f5;
 }
 
 /* Use clamp() for responsive typography */
-
 .content-header {
   padding: 15vh 6vw 0;
-
   font-size: clamp(1.25rem, 2vw, 1.375rem);
   font-weight: 500;
 }
@@ -117,16 +90,15 @@ html {
   margin-bottom: 8px;
 }
 
-/* Main */
-
 .content main {
   position: absolute;
   width: 100%;
   top: 32.5vh;
 }
 
+/* Form */
 .content form .white-background {
-  background: var(--form-background-color);
+  background: #ffffff;
   padding: 2vh 6vw;
 }
 
@@ -149,9 +121,10 @@ html {
 }
 
 /* Reset default styles */
-
 .content .form-control input {
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   font-family: inherit;
   outline: none;
 }
@@ -160,26 +133,25 @@ html {
   display: block;
   width: 250px;
   padding: 6px 12px;
-  border: 1px solid var(--form-input-border-color);
+  border: 1px solid #ddd;
   border-radius: 3px;
 }
 
 .content .form-control input:focus {
-  border: 1px solid var(--form-input-border-color-focus);
+  border: 1px solid #3b90e1;
 }
 
 .content .form-control input.error {
-  border: 1px solid var(--form-input-border-color-error);
+  border: 1px solid #f46d75;
 }
 
-.content button[type='submit'] {
+.content button[type=submit] {
   cursor: pointer;
   font-size: 0.9rem;
   font-weight: bold;
-  color: var(--submit-btn-text-color);
-  background: var(--submit-btn-background-color);
-  box-shadow: 0 2px 4px var(--submit-btn-box-shadow);
-
+  color: #ffffff;
+  background: #dfb099;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
   padding: 12px 32px;
   border: none;
   border-radius: 5px;
@@ -195,5 +167,5 @@ html {
 .content .login .login-link {
   text-decoration: none;
   font-weight: bold;
-  color: var(--login-text-color);
-}
+  color: #dfb099;
+}/*# sourceMappingURL=main.css.map */

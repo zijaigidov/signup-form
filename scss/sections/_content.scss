@@ -1,0 +1,105 @@
+/* Content */
+
+.content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 40%;
+  background: $content-bg-clr;
+}
+
+/* Use clamp() for responsive typography */
+
+.content-header {
+  padding: 15vh 6vw 0;
+
+  font-size: clamp(1.25rem, 2vw, 1.375rem);
+  font-weight: 500;
+}
+
+.content-header h2 {
+  font-size: clamp(1.375rem, 2vw, 1.5rem);
+  margin-bottom: 8px;
+}
+
+.content main {
+  position: absolute;
+  width: 100%;
+  top: 32.5vh;
+}
+
+/* Form */
+
+.content form .white-background {
+  background: $form-bg-clr;
+  padding: 2vh 6vw;
+}
+
+.content form h2 {
+  margin-bottom: 1rem;
+}
+
+.content .form-row {
+  display: flex;
+  gap: 4rem;
+}
+
+.content .form-row:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.content .form-control label {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* Reset default styles */
+
+.content .form-control input {
+  appearance: none;
+  font-family: inherit;
+  outline: none;
+}
+
+.content .form-control input {
+  display: block;
+  width: 250px;
+  padding: 6px 12px;
+  border: 1px solid $form-input-border-clr;
+  border-radius: 3px;
+}
+
+.content .form-control input:focus {
+  border: 1px solid $form-input-border-clr-focus;
+}
+
+.content .form-control input.error {
+  border: 1px solid $form-input-border-clr-error;
+}
+
+.content button[type='submit'] {
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: $submit-btn-clr;
+  background: $submit-btn-bg-clr;
+  box-shadow: 0 2px 4px $submit-btn-box-shadow;
+
+  padding: 12px 32px;
+  border: none;
+  border-radius: 5px;
+  margin: 3vh 0 0 6vw;
+  transition: 0.5s filter;
+}
+
+.content .login {
+  font-size: 0.875rem;
+  margin: 24px 0 0 6vw;
+}
+
+.content .login .login-link {
+  text-decoration: none;
+  font-weight: bold;
+  color: $login-clr;
+}
