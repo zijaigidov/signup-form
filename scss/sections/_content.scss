@@ -70,6 +70,10 @@
   border-radius: 3px;
 }
 
+.content .form-control input[type='password']::placeholder {
+  font-size: 0.625rem;
+}
+
 .content .form-control input:focus {
   border: 1px solid $form-input-border-clr-focus;
 }
