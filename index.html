@@ -15,7 +15,7 @@
     />
 
     <link rel="stylesheet" href="./css/main.css" />
-    <script defer src="./js/index.js"></script>
+    <script defer src="./js/form.js"></script>
   </head>
   <body>
     <div class="wrapper">
@@ -55,49 +55,95 @@
           </p>
         </header>
         <main>
-          <form action="https://httpbin.org/post" method="post" id="signup-form">
+          <form
+            action="https://httpbin.org/post"
+            method="post"
+            id="form"
+            novalidate
+          >
             <div class="white-background">
               <h2>Sign Up</h2>
               <div class="form-row">
                 <div class="form-control">
-                  <label for="first-name">FIRST NAME</label>
-                  <input type="text" id="first-name" name="first-name" placeholder="John" required />
-                  <small class="error-msg"></small>
+                  <label for="firstName">FIRST NAME</label>
+                  <input
+                    type="text"
+                    id="firstName"
+                    name="firstName"
+                    placeholder="John"
+                    required
+                  />
+                  <small class="error"></small>
                 </div>
                 <div class="form-control">
-                  <label for="last-name">LAST NAME</label>
-                  <input type="text" id="last-name" name="last-name" placeholder="Smith" required />
-                  <small class="error-msg"></small>
+                  <label for="lastName">LAST NAME</label>
+                  <input
+                    type="text"
+                    id="lastName"
+                    name="lastName"
+                    placeholder="Smith"
+                    required
+                  />
+                  <small class="error"></small>
                 </div>
               </div>
               <div class="form-row">
                 <div class="form-control">
                   <label for="email">EMAIL</label>
-                  <input type="email" id="email" name="email" placeholder="johnsmith@example.com" required />
-                  <small class="error-msg"></small>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="johnsmith@example.com"
+                    required
+                  />
+                  <small class="error"></small>
                 </div>
                 <div class="form-control">
-                  <label for="phone-number">PHONE NUMBER</label>
-                  <input type="tel" id="phone-number" name="phone-number" placeholder="1234567890" required />
-                  <small class="error-msg"></small>
+                  <label for="phone">PHONE NUMBER</label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="1234567890"
+                    required
+                  />
+                  <small class="error"></small>
                 </div>
               </div>
               <div class="form-row">
                 <div class="form-control">
                   <label for="password">PASSWORD</label>
-                  <input type="password" id="password" name="password" placeholder="●●●●●●●●" required />
-                  <small class="error-msg"></small>
+                  <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="●●●●●●●●"
+                    required
+                    minlength="8"
+                    maxlength="30"
+                    pattern="^(?=.*[A-Z])(?=.*[0-9]).{8,30}$"
+                  />
+                  <small class="error"></small>
                 </div>
                 <div class="form-control">
-                  <label for="password-confirmation">CONFIRM PASSWORD</label>
-                  <input type="password" id="password-confirmation" name="password-confirmation" placeholder="●●●●●●●●" required />
-                  <small class="error-msg"></sma>
+                  <label for="passwordConfirm">CONFIRM PASSWORD</label>
+                  <input
+                    type="password"
+                    id="passwordConfirm"
+                    name="passwordConfirm"
+                    placeholder="●●●●●●●●"
+                    required
+                  />
+                  <small class="error"></small>
                 </div>
               </div>
             </div>
             <button type="submit" class="create-account">Create Account</button>
-          </>
-          <div class="login">Already have an account? <a href="#" class="login-link">Log in</a></div>
+          </form>
+          <div class="login">
+            Already have an account? <a href="#" class="login-link">Log in</a>
+          </div>
         </main>
       </div>
     </div>

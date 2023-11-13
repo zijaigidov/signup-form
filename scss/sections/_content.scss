@@ -56,6 +56,10 @@
 
 /* Reset default styles */
 
+.content .form-control {
+  width: 300px;
+}
+
 .content .form-control input {
   appearance: none;
   font-family: inherit;
@@ -63,8 +67,8 @@
 }
 
 .content .form-control input {
+  width: 100%;
   display: block;
-  width: 250px;
   padding: 6px 12px;
   border: 1px solid $form-input-border-clr;
   border-radius: 3px;
@@ -74,12 +78,20 @@
   font-size: 0.625rem;
 }
 
+.content .form-control .error {
+  color: $form-error-color;
+}
+
 .content .form-control input:focus {
   border: 1px solid $form-input-border-clr-focus;
 }
 
-.content .form-control input.error {
-  border: 1px solid $form-input-border-clr-error;
+.content .form-control input.valid {
+  border: 1px solid $form-input-border-clr-valid;
+}
+
+.content .form-control input.invalid {
+  border: 1px solid $form-input-border-clr-invalid;
 }
 
 .content button[type='submit'] {
