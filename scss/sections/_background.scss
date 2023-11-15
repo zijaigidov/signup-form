@@ -1,7 +1,8 @@
 /* Background */
 
 .background {
-  background: url('/images/background.jpg') no-repeat center left / cover;
+  /* Set path relative to main.css */
+  background: url('./../images/background.jpg') no-repeat center left / cover;
   position: absolute;
   top: 0;
   left: 0;
